@@ -105,6 +105,7 @@
                             specimen book. It has survived not only five centuries, but also the leap 
                             into electronic typesetting, remaining essentially unchanged. 
 							</p>
+							<span style="font-style: italic;">This is a quote</span>
 						</div>
                     </div>
 				</div> 
