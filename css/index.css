@@ -4,3 +4,335 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/*Navigation bar*/
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background-color: #cfcfcff8;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    justify-content: flex-end;
+    position: fixed;
+
+}
+
+header .logo
+{
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+
+header .logo img
+{
+    height: 45px;
+}
+
+header nav
+{
+    float: right;
+}
+
+header nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul
+{
+    list-style: none;
+}
+
+header nav ul li a
+{
+    height: 55px;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active
+
+{
+    background: #39B282;
+    text-decoration: none;
+}
+
+header nav ul li a:active,
+header nav ul li a:link,
+header nav ul li a:visited
+{
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.menu-toggle
+{
+    color: #000;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+header ul li ul
+{
+    position: absolute;
+    background-color: #cfcfcf7e;
+    display: block;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+header ul li:hover ul
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Carousel*/
+.carousel-inner img
+{
+    width: 100%;
+    height: 100%;
+}
+
+/**/
+h2
+{
+  font-size: 30px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #7700C6;
+  text-align: center;
+}
+
+/*About Us*/
+.about
+{
+    width: 100%;
+    margin-top: 40px;
+    line-height: 25px;
+}
+
+.about img
+{
+    padding-top: 10px;
+    width: 50%;
+    float: left;
+}
+
+#aboutContent p
+{
+    padding-top: 40px;
+}
+
+/*Our team*/
+.teamdetails
+{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+.teamdetails img
+{
+    padding-top: 20px;
+    width: 50%;
+}
+
+.teamdetails p
+{
+    padding-top: 5px;
+}
+
+/*Our Promise*/
+.promise
+{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("../img/suicidebanner.jpg");
+    background-size: cover;
+    color: #efefef !important;
+    background-attachment: fixed;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.promise h2
+{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+.promise p 
+{
+    font-size: 14px;
+    margin-top: 20px;
+    color:#ccc;
+}
+
+.promise .col-md-4:hover
+{
+    background: #39b2827c;
+    transition: 0.7s;
+}
+
+#icon
+{
+    font-size: 40px;
+    margin: 20px auto;
+    padding: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+/*Contact Us*/
+
+.contact h2
+{
+    padding-top: 30px;
+    color: #fff;
+}
+
+.contact
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/map.jpg")!important;
+    background-size: cover!important;
+    margin-top: 40px;
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+
+.follow
+{
+    color: #f7f31e;
+    padding-top: 10px;
+}
+
+#contactl
+{
+    color: #fff;
+}
+
+.contact-info .fa
+{
+    margin: 10px;
+    color: #39B282;
+    font-weight: bold;
+}
+
+#map 
+{
+    padding-top: 30px;
+    text-align: center;
+}
+
+#map iframe
+{
+    width: 100%;
+    height: 250px;
+}
+
+/*Responsiveness*/
+@media(max-width: 991px)
+{
+    /*navbar*/
+    header
+    {
+        padding:0 20px;
+    }
+
+    .menu-toggle
+    {
+        display: block;
+    }
+
+    header nav
+    {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background-color:#cfcfcff8;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    header nav.active
+    {
+        left: 0;
+    }
+    header nav ul
+    {
+        display: block;
+        text-align: center;
+    }
+
+    header .logo img
+    {
+        height: 35px;
+    }
+
+    header nav ul li a
+    {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    header ul li ul
+    {
+        width: 100%;
+    }
+
+    /*H2 tags*/
+    h2
+    {
+      font-size: 25px;
+    }
+
+    /*About us*/
+    #aboutContent
+    {
+        font-size: 14px;
+    }
+
+    .about img
+    {
+        padding-top: 50px;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -1px;
+        left: 1px;
+    }
+
+    .teamdetails img
+    {
+        padding-top: 50px;
+        width: 100%;
+        height: auto;
+    }
+
+    /*Our Promise*/
+    .promise h3
+    {
+        font-size: 20px;
+    }
+
+    .promise p
+    {
+        font-size: 15px;
+    }
+
+}
