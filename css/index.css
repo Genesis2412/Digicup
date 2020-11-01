@@ -198,22 +198,84 @@ h2
     height: 80px;
     width: 80px;
 }
+/*Testimonials*/
+.test
+{
+    width: 100%;
+   
+    background-image: linear-gradient(#fff, #1e88e5c9, #fff);
+    background-repeat: no-repeat
+
+}
+
+.test h2
+{
+    padding-top: 30px;
+}
+
+#slides 
+{
+    max-width: 1500px;
+    margin: auto
+}
+
+.carousel-caption 
+{
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+#image-caption 
+{
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0.5rem
+}
+
+.test i 
+{
+    background-color: #03c97d;
+    padding: 30px;
+}
+
+
+.carousel-control-prev 
+{
+    justify-content: flex-start
+}
+
+.carousel-control-next 
+{
+    justify-content: flex-end
+}
+
+.carousel-control-prev,
+.carousel-control-next 
+{
+    transition: none;
+    opacity: unset
+}
 
 /*Contact Us*/
+.contact
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/map.jpg")!important;
+    background-size: cover!important;
+    font-size: 16px;
+    padding-bottom: 40px;
+}
 
 .contact h2
 {
     padding-top: 30px;
     color: #fff;
-}
-
-.contact
-{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/map.jpg")!important;
-    background-size: cover!important;
-    margin-top: 40px;
-    font-size: 16px;
-    padding-bottom: 40px;
 }
 
 .follow
@@ -230,7 +292,7 @@ h2
 .contact-info .fa
 {
     margin: 10px;
-    color: #39B282;
+    color: #3ba5cf;
     font-weight: bold;
 }
 
@@ -336,3 +398,6 @@ h2
     }
 
 }
+
+
+

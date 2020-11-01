@@ -11,7 +11,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+		
+
 		<link rel="stylesheet" href="./css/index.css">
 		<title>HOMEPAGE || BEFRIENDERS</title>
   	</head>
@@ -69,11 +70,11 @@
             </div>
 
             <div class="carousel-item">
-                <img src="./img/1.jpg" alt="">
+                <img src="./img/2.jpg" alt="">
             </div>
 
             <div class="carousel-item">
-                <img src="./img/1.jpg" alt="">
+                <img src="./img/3.jpg" alt="">
             </div>
   
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -159,6 +160,36 @@
                     </div>
                                
 				</div>
+			</div>
+		</section>
+
+		<!--Testimonials-->
+		<section class="test">
+			<h2>Testimonials</h2>
+			<div class="container">
+    			<div id="slides" class="carousel slide" data-ride="carousel">
+        			<div class="carousel-inner">
+            			<div class="carousel-item active">
+                			<div class="carousel-caption">
+                    			<p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, 
+									I don't know what will.This was the very best explanation of frameworks for brginners
+									that I've ever seen.
+								</p>
+                    			<div id="image-caption">Nick Doe</div>
+                			</div>
+						</div>
+						<div class="carousel-item">
+                <div class="carousel-caption">
+                    <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, 
+						I don't know what will.This was the very best explanation of frameworks for brginners 
+						that I've ever seen.
+					</p>
+                    <div id="image-caption">Cromption Greves</div>
+                </div>
+            </div>
+					</div> 
+					<a class="carousel-control-prev" href="#slides" data-slide="prev"> <i class='fa fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#slides" data-slide="next"> <i class='fa fa-arrow-right'></i> </a>
+    			</div>
 			</div>
 		</section>
 
