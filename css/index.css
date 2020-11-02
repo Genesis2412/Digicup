@@ -111,7 +111,14 @@ header ul li:hover ul
     height: 100%;
 }
 
-/**/
+.carousel-control-prev-icon,
+.carousel-control-next-icon 
+{
+    margin: 30px;
+    padding: 15px;
+}
+
+/*H2 headings*/
 h2
 {
   font-size: 30px;
@@ -199,19 +206,99 @@ h2
     height: 80px;
     width: 80px;
 }
+
+/*Need help*/
+.need
+{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.need h5
+{
+    padding-top: 20px;
+    font-weight: bold; 
+    padding-bottom: 15px; 
+    text-align: center; 
+    color: #7c0000;
+}
+
+.need h2
+{
+    padding-bottom: 30px;
+}
+
+.need #emergency
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0041163f;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+}
+
+.need #emergency i
+{
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.need #emergency a:link,
+.need #emergency a:visited
+{
+    color: #020202;
+}
+
+.need #emergency a:hover
+{
+    color: #008d2f;
+}
+
+.need #enum
+{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #7c0000;
+    background-color: #7c00003d;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+
+.need #enum img
+{
+    width: 15%;
+}
+
+#problem
+{
+    background-color: #4dbd3752;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.need ul li{
+    list-style-type: none;
+    line-height: 3rem;
+}
+
+#happen
+{
+    background-color: #4dbd376e;
+}
+
+#effect
+{
+    background-color: #4dbd3752;
+    border-radius: 0px 15px 15px 0px;
+}
+
 /*Testimonials*/
 .test
 {
     width: 100%;
-   
+    margin-top: 40px;
     background-image: linear-gradient(#fff, #1e88e5c9, #fff);
     background-repeat: no-repeat
 
-}
-
-.test h2
-{
-    padding-top: 30px;
 }
 
 #slides 
@@ -358,6 +445,14 @@ h2
         width: 100%;
     }
 
+    /*Carousel*/
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon 
+    {
+        margin: 25px;
+        padding: 10px;
+    }
+
     /*H2 tags*/
     h2
     {
@@ -398,6 +493,28 @@ h2
         font-size: 15px;
     }
 
+    .need
+    {
+        text-align: center;
+    }
+
+    #problem
+    {
+        margin-top: 30px;
+    }
+
+    .carousel-caption 
+    {
+        position: initial;
+        padding: 2rem 5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .test i 
+    {
+        padding: 15px;
+    }
 }
 
 

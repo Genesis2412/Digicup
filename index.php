@@ -11,8 +11,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-
 		<link rel="stylesheet" href="./css/index.css">
 		<title>HOMEPAGE || BEFRIENDERS</title>
   	</head>
@@ -62,7 +60,7 @@
 	    </header>
 	  	
 	    <!--Carousel-->
-        <div id="demo" class="carousel slide" data-ride="carousel">  
+        <div id="banner" class="carousel slide" data-ride="carousel">  
           
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -77,11 +75,11 @@
                 <img src="./img/3.jpg" alt="">
             </div>
   
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <a class="carousel-control-prev" href="#banner" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </a>
 
-            <a class="carousel-control-next" href="#demo" data-slide="next">
+            <a class="carousel-control-next" href="#banner" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
         </div>	    
@@ -142,7 +140,7 @@
 
 					<div class="col-md-4 text-center">
 						<div id="icon">
-							<i class="fa fa-handshake-o"></i>
+							<i class="fa fa-eye"></i>
 						</div>   
 						<h3>OUR VISION</h3>
 						<p>A society in which nobody dies by suicide, where people are able to explore their own feelings, acknowledge and respect
@@ -152,7 +150,7 @@
 
 					<div class="col-md-4 text-center">
 						<div id="icon">
-							<i class="fa fa-users"></i>
+							<i class="fa fa-key"></i>
 						</div>
 						<h3>OUR VALUES</h3>
 						<p>Our values are based on these beliefs. The importance of having the opportunity to express painful feelings.
@@ -160,6 +158,79 @@
 						</p>                  
                     </div>
                                
+				</div>
+			</div>
+		</section>
+
+		<!---->
+		<section class="need">
+			<h2>Need Help?</h2>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-3">
+						<div id="emergency">
+							<h6 style="color: #005f20;">CHAT WITH US</h6>
+							<a href=""><i class="fa fa-headphones"></i></a>
+							<p>We are here to listen to you
+								<br><br>
+								<span style="color: #7c0000; font-weight: bold">HOTLINE : +230 4670160</span>
+							</p>
+						</div>
+						<div id="enum">
+							<h6>EMERGENCY NUMBERS</h6>
+							<img src="./img/ambulance.png" alt="">
+							<p style="font-weight: bold;">Tel: 114</p>
+							<img src="./img/police.png" alt="">
+							<p style="font-weight: bold;">Tel: 999</p>
+							<img src="./img/firetruck.png" alt="">
+							<p style="font-weight: bold;">Tel: 115</p>
+						</div>
+					</div>
+					<div class="col-sm-3" id="problem">
+						<h5>Why you have problems?</h5>
+						<ul>
+							<li>You cannot face difficulties in your personal life, family life, professional life
+								, or between friends.
+							</li>
+							<li>You feel alone and don't know what to do.</li>
+							<li>Feel the discouragement due to, failing to keep a promise, unfaithful partner
+								, your feelings was hurt, or your partner left you.
+							</li>
+							<li>You didn't plan your life well.</li>
+							<li>You couldn't achieve your ambitions.</li>
+						</ul>
+					</div>
+					<div class="col-sm-3" id="happen">
+						<h5>What happens when you have problem?</h5>
+						<p style="font-weight: bold">You feel discouraged, sad, and feel like quitting everything and go... </p>
+						<ul>
+							<li>You feel tired.</li>
+							<li>You don't feel sleepy.</li>
+							<li>You don't know what to do.</li>
+							<li>You feel disgusted by everything</li>
+							<li>You don't feel like eating</li>
+							<li>You have family problems</li>
+							<li>You feel unwanted</li>
+							<li>You lose faith in life</li>
+							<li>You feel like quitting everything</li>
+							<li><b>Suicide is not a solution</b></li>
+						</ul>
+					</div>
+					<div class="col-sm-3" id="effect">
+					<h5>What effect problems have on you?</h5>
+						<p style="font-weight: bold">You can</p>
+						<ul>
+							<li>Have brain issues</li>
+							<li>Have pain in your whole body</li>
+							<li>Lost of weight.</li>
+							<li>Drowning in drugs and alcohol.</li>
+							<li>Feel sad.</li>
+							<li>Have imsomnia</li>
+							<li>Lose hope in everything</li>
+							<li>Decide to leave everything and go</li>
+							<li>Search for someone who you can share your feelings but doesn't find one.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
