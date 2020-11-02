@@ -6,50 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!--Bootstrap CDN -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> <!--jQuery CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--FontAwesome CDN -->
+        <link rel="stylesheet" href="css//Events.css"> <!-- Common sharable css file for Events -->
+        <link rel="stylesheet" type="text/css" href="css//footer.css">
         <style>
-            #header img{
-                padding-top:10px;
-                padding-left: 25px;
-                padding-bottom: 10px;
+            
 
-            }
-            #header{
-                background-color: green;
-            }
-            #HeaderLinks{
-                float:right;
-                padding-top:20px;
-                padding-right:15px; /* Prevent displaying element at right end border of website*/
-                
-            }
-            .LinksHead{
-                padding-left:20px;
-            }
-            #header a:hover{
-                text-decoration: none;
-                color:lightgrey;
-            }
-            #header a{
-                text-decoration: none;
-                color:white;
-            }
+
             .carousel-inner img
             {
                 width: 100%;
                 height: 100%;
             }
-            #EventMain{
-                position: relative;
-                text-align: center;
-            }
-            #EventMain p{
-                position: absolute;
-                color:white;
-                top:50%;
-                left:50%;
-                font-size: xx-large;
-                transform: translate(-50%, -50%);
-            }
+            
             #searchQueryHolder{
                 position: absolute;
                 top:65%;
@@ -60,65 +29,67 @@
                 border-radius: 15px;
                 outline: none;
                 border: none;
-                padding-left: 17px;
+                padding-left: 30px;
             }#EventHolders{
                 padding-left:15px;
             }
             #cardSpacers{
                 padding-bottom:10px;
             }
+            #InputIcon{
+                position: absolute;
+                padding-left: 10px;
+                padding-top: 5px;
+            }
+            #footer{
+                background-color: grey;
+                color:white;
+                text-align: center;
+                position: relative;
+                bottom:0;
+                left:0;
+                width:100%;
+            }
+            #Links{
+           color:black;
+       }
+       #Links:hover{
+           color:rgb(88, 88, 88);
+       }
             
         </style>
     </head>
     <body>
-        <div id="header"> 
-            <img src="Images/EventImageDir/BefriendersLogo.jpeg" width="150px" height="70px" alt="Logo" />
-            <div class="text-right" id="HeaderLinks" > 
-                <a href="" class="LinksHead"> Homepage </a>
-                <a href="" class="LinksHead"> Login </a>
-                <a href="" class="LinksHead"> Contact Us </a>
-            </div>
-        </div>
-        <!-- <div id="demo" class="carousel slide" data-ride="carousel">  
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-    
-            <div class="carousel-inner">  width=2130px | height 560px 
-                <div class="carousel-item active">
-                    <img src="Images//EventImageDir/EventCover1.jpg" alt="Cover 1 Image">
-                </div>
-    
-                <div class="carousel-item">
-                    <img src="Images//EventImageDir/EventCover2.jpg" alt="Cover 2 Image">
-                </div>
-    
-                <div class="carousel-item">
-                    <img src="Images//EventImageDir/EventCover3.jpg" alt="Cover 3 Image">
+        <nav> 
+            <div id="header"> 
+                <img src="img//logo.png" width="150px" height="70px" alt="Logo" />
+                <div class="text-right" id="HeaderLinks" > 
+                    <a href="" class="LinksHead"> Homepage </a>
+                    <a href="" class="LinksHead"> Login </a>
+                    <a href="" class="LinksHead"> Contact Us </a>
                 </div>
             </div>
-      
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-    
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div> --> 
-        <div style="padding-top: 5px;"> <!-- Reserved Space --> </div>
+        </nav>       
+        
+        
         <div id="EventMain">
-            <img src="Images/EventImageDir/TeamPhoto.jpg" width="100%" style="filter: brightness(70%);">
-            <p> Discover our events!  </p>
-            <div id="searchQueryHolder"> 
-                <Span style="color:whitesmoke;"> Search for an event: &nbsp; </Span><input type="text" name="searchEvent" size="25" /> 
-            </div>
             
+            <img src="img//TeamPhoto.jpg" width="100%" height="50%" style="filter: brightness(70%);">
+            <p style="padding-top:10px;"> Discover our events!  <br/>
+             <span style="color:lightgrey;font-size:20pt;"> Trending: <a href="" style="color:rgb(255, 145, 0)">  Suicide Campaign at Rose Hill </a> </span></p>
+            
+            <div id="searchQueryHolder"> 
+                    <Span style="color:whitesmoke;"> Search for an event: &nbsp; </Span>
+                    
+                    <div class="input-icons"> 
+                        <i id="InputIcon" class="fa fa-search icon"></i> 
+                        <input type="text" name="searchEvent" size="25" /> 
+                    </div>
+            </div>
+           
         </div>
         <div style="padding-top: 20px;"> <!-- Reserved Space --> </div>
-        <p class="text-center "> Our List of Events : </p>
+        <h3 class="text-center "> Our List of Events : </h3> <br/>
         <div id="EventHolders"> 
 
             <div class="row">
@@ -126,7 +97,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header" style="background-color: #04adfc;">Talks</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -137,7 +109,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header" style="background-color: #04fc2d;">Formation</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -148,7 +121,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header" style="background-color: #f1d620;"> Refresher Course </div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -159,7 +133,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header" style="background-color: #b8b8b8;">Awareness</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -170,7 +145,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header" style="background-color: #0869ca;">Others</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -181,7 +157,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header">EventType</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -192,7 +169,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header">EventType</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -203,7 +181,8 @@
                 <!--Event Card Start Here -->
                 <div class="col-lg-3 col-sm-6" id="cardSpacers">                   
                     <div class="card" style="width: 18rem;">
-                        <img src="Images/EventImageDir/talk.jpg" class="card-img-top" alt="Event Captions">
+                        <div class="card-header">EventType</div>
+                        <img src="img//talk.jpg" class="card-img-top" alt="Event Captions">
                         <div class="card-body">
                         <p class="card-text">Event Informations.</p>
                         </div>
@@ -217,7 +196,26 @@
 
             </div>
         </div>
-      
+        <footer class="footer">
+            <div class="footer-left">
+                <h5>Befrienders Mauritius</h5>
+                <p>We an help prevent suicide. Befrienders provide 24/7 free and confidential support for people in distress, prevention and crisis resources for you or your loved ones.</p>
+            </div>
+        
+            <div class="footer-right">
+                <h5>Address</h5>
+                <i class="fas fa-map-marked-alt"></i><p>Befrienders(Mauritius)<br>1st Floor Flat,<br> 152 Royal Road,<br> Beau Bassin</p>
+                <i class="fa fa-tty"></i><p>Office: 4670160</p>
+                <i class="fa fa-mobile"></i><p>Mobile: 54837233</p>
+                <i class="fa fa-fire"></i><p>Hotline: 8009393</p>
+                <i class="fa fa-envelope"></i><p>Email: <a href="mailto:adminofficer.befrienders@gmail.com" id="Links"> Befrienders Mauritius</a> </p>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>All Right reserved by &copy;Befrienders</p>
+            </div>
+    
+        </footer>
         
     </body>
 </html>
