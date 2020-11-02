@@ -18,7 +18,7 @@
         <!--Navigation Bar-->
 	  	<header>
 	        <div class="logo">
-	          <a href="#"><img src="" alt="Befrienders Mauritius"></a>
+	          <a href="#"><img src="./img/logo.png" alt="Befrienders Mauritius"></a>
 	        </div>
 
 	        <nav>
@@ -296,7 +296,7 @@
 		<!--Footer-->
 		<div class="footer">
 	        <img id="logoFooter" src="">
-	        <img src="./img/mpLogo.png">
+	        <img src="./img/logo.png">
 	        <p>&copy; 2020 All rights reserved</p>
 		</div>
 

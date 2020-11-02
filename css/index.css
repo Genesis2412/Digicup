@@ -12,7 +12,7 @@ header
     top: 0;
     left: 0;
     padding: 0 100px;
-    background-color: #cfcfcff8;
+    background-color: #585858f8;
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
@@ -73,9 +73,9 @@ header nav ul li a:active,
 header nav ul li a:link,
 header nav ul li a:visited
 {
-  color: #000;
-  text-decoration: none;
-  font-size: 15px;
+    color: #fcff5c;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .menu-toggle
@@ -91,7 +91,7 @@ header nav ul li a:visited
 header ul li ul
 {
     position: absolute;
-    background-color: #cfcfcf7e;
+    background-color: #585858f8;
     display: block;
     transition: 0.5s;
     opacity: 0;
@@ -396,6 +396,22 @@ h2
     height: 250px;
 }
 
+.footer
+{
+    background-color: #585858f8;
+    color: #fff;
+    padding:10px;    
+    width: 100%;
+    position: relative;
+    bottom:0;
+    text-align: center;
+}
+
+.footer img
+{
+    width: 10%;
+}
+
 /*Responsiveness*/
 @media(max-width: 991px)
 {
@@ -415,7 +431,7 @@ h2
         position: absolute;
         width: 100%;
         height: calc(100vh - 50px);
-        background-color:#cfcfcff8;
+        background-color: #585858f8;
         top: 50px;
         left: -100%;
         transition: 0.5s;
@@ -493,6 +509,7 @@ h2
         font-size: 15px;
     }
 
+    /*Need Help*/
     .need
     {
         text-align: center;
@@ -514,6 +531,11 @@ h2
     .test i 
     {
         padding: 15px;
+    }
+
+    .footer img
+    {
+        width: 30%;
     }
 }
 
