@@ -1,16 +1,9 @@
 <?php
 
-    $servername='localhost';
-    $username='root';
-    $password='';
-    $database='befrienders';
-
-    //Creating connection
-
-    $conn=mysqli_connect($servername,$username,$password,$database);
+    include ('connection.php');
 
     $sql="SELECT * FROM home";
-    $result = mysqli_query($conn,$sql);
+    $result = mysqli_query($connection,$sql);
     $data=array();
 
     if(mysqli_num_rows($result) >= 0)
@@ -18,6 +11,20 @@
         while($row=mysqli_fetch_array($result))
         {
             $data[] = $row;
+        }
+    }
+
+    $search="SELECT name, remark FROM testimonial WHERE ID != 1";
+    $query = mysqli_query($connection,$search);
+
+    $select="SELECT name, remark FROM testimonial WHERE ID=1";
+    $find= mysqli_query($connection,$select);
+
+    if(mysqli_num_rows($find) >= 0)
+    {
+        while($lrow=mysqli_fetch_array($find))
+        {
+            $fetch[] = $lrow;
         }
     }
 ?>

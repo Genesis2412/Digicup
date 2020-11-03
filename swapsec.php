@@ -8,7 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/hbackend.css">
+    <title></title>
 </head>
 <body>
     <a href="#" onclick="allItems();return false;">List the sections</a></li>
@@ -28,15 +29,16 @@
                     <form method="POST" id="update_form"></form>
                     <form method="POST" enctype="multipart/form-data" id="myform">
                     <label>Image</label>
-                    <input type="file" id="file" name="file" />
-                    <input type="button" class="button" value="Upload" id="but_upload">
+                    <input type="file" id="file" name="file"/>
 
-                    <div class='preview'>
+                    <div class="preview" style="text-align: center;">
                         <img src="" id="img" width="100" height="100">
                     </div>
 
+                    <input type="button" class="button" value="Upload" id="but_upload">
+                    <br><br>
                     <label>Description</label>
-                    <textarea name="description" id="description" form="update_form"></textarea>
+                    <input type="text" name="description" id="description" form="update_form">
                     <br>
                     <label>Quotes/Header</label>
                     <input type="text" name="quote" id="quote" form="update_form">

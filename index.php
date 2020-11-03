@@ -50,9 +50,9 @@
 	                  		</li>
 	                	</ul>
 	            	</li>
-	            	<li><a href="">ABOUT US</a></li>
-                    <li><a href="">CONTACT US</a></li>
-                    <li><a href="">NEED HELP?</a></li>
+	            	<li><a href="#aboutUs">ABOUT US</a></li>
+                    <li><a href="#contactUs">CONTACT US</a></li>
+                    <li><a href="#needHelp">NEED HELP?</a></li>
 	          </ul>
 	        </nav>
 
@@ -84,11 +84,11 @@
 
             <a class="carousel-control-next" href="#banner" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
-            </a>
+			</a>
         </div>	    
 
-	    <!--About Us-->
-	    <a name="aboutUs"></a>
+		<!--About Us-->
+		<a name="aboutUs"></a>
 		<section class="about">
 			<div class="container">
 				<h2>About Us</h2>
@@ -119,6 +119,7 @@
         </section>
 
 		<!--Our Promise-->
+		<a name="ourpromise"></a>
 		<section class="promise">
 			<div class="container">
 				<h2>Our Promise</h2>
@@ -151,7 +152,7 @@
 			</div>
 		</section>
 
-		<!---->
+		<a name="needHelp"></a>
 		<section class="need">
 			<h2>Need Help?</h2>
 			<div class="container-fluid">
@@ -161,18 +162,18 @@
 							<h6 style="color: #005f20;">CHAT WITH US</h6>
 							<a href=""><i class="fa fa-headphones"></i></a>
 							<p>We are here to listen to you
-								<br><br>
-								<span style="color: #7c0000; font-weight: bold">HOTLINE : +230 4670160</span>
+							<br><br>
+							<a href="tel:+2304670160"><span id="emerlink">HOTLINE : +230 4670160</span></a>
 							</p>
 						</div>
 						<div id="enum">
 							<h6>EMERGENCY NUMBERS</h6>
 							<img src="./img/ambulance.png" alt="">
-							<p style="font-weight: bold;">Tel: 114</p>
+							<p><a href="tel:114"><span id="emerlink">Tel: 114</span></a></p>
 							<img src="./img/police.png" alt="">
-							<p style="font-weight: bold;">Tel: 999</p>
+							<p><a href="tel:999"><span id="emerlink">Tel: 999</span></a></p>
 							<img src="./img/firetruck.png" alt="">
-							<p style="font-weight: bold;">Tel: 115</p>
+							<p><a href="tel:115"><span id="emerlink">Tel: 115</span></a></p>
 						</div>
 					</div>
 					<div class="col-sm-3" id="problem">
@@ -225,6 +226,7 @@
 		</section>
 
 		<!--Testimonials-->
+		<a name="testimonials"></a>
 		<section class="test">
 			<h2>Testimonials</h2>
 			<div class="container">
@@ -232,22 +234,18 @@
         			<div class="carousel-inner">
             			<div class="carousel-item active">
                 			<div class="carousel-caption">
-                    			<p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, 
-									I don't know what will.This was the very best explanation of frameworks for brginners
-									that I've ever seen.
-								</p>
-                    			<div id="image-caption">Nick Doe</div>
+                    			<p><?php echo $fetch[0][1]; ?></p>
+                    			<div id="image-caption"><?php echo $fetch[0][0]; ?></div>
                 			</div>
 						</div>
+						<?php if(mysqli_num_rows($query) >= 0)	{	while($lrow=mysqli_fetch_array($query))	{ ?>
 						<div class="carousel-item">
-                <div class="carousel-caption">
-                    <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, 
-						I don't know what will.This was the very best explanation of frameworks for brginners 
-						that I've ever seen.
-					</p>
-                    <div id="image-caption">Cromption Greves</div>
-                </div>
-            </div>
+							<div class="carousel-caption">
+								<p><?php  echo $lrow['remark']; ?></p>
+								<div id="image-caption"><?php echo $lrow['name']; ?></div>
+							</div>
+						</div> 
+						<?php } } ?>          			
 					</div> 
 					<a class="carousel-control-prev" href="#slides" data-slide="prev"> <i class='fa fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#slides" data-slide="next"> <i class='fa fa-arrow-right'></i> </a>
     			</div>
@@ -262,10 +260,10 @@
 				<div class="row">
                     <div class="col-md-6 contact-info">   
 						<div class="follow"><b><?php echo $data[8][4] ?> </b><i class="fa fa-map-marker"></i><span id="contactl"><?php echo $data[8][3] ?></span></div>
-						<div class="follow" style="color: #fc3903; font-size: 18px;"><b><?php echo $data[9][4] ?> </b><i class="fa fa-phone"></i><?php echo $data[9][3] ?></div>                             
-						<div class="follow"><b><?php echo $data[10][4] ?> </b><i class="fa fa-phone"></i><span id="contactl"><?php echo $data[10][3] ?></span></div>
-						<div class="follow"><b><?php echo $data[11][4] ?> </b><i class="fa fa-whatsapp"></i><span id="contactl"><?php echo $data[11][3] ?></span></div>
-						<div class="follow"><b><?php echo $data[12][4] ?> </b><i class="fa fa-envelope"></i><a href="mailto:adminofficer.befrienders@gmail.com"><span id="contactl"><?php echo $data[12][3] ?></span></a></div>
+						<div class="follow" style="color: #fc3903; font-size: 18px;"><b><?php echo $data[9][4] ?> </b><i class="fa fa-phone"></i><a href="tel:+2308009393"><span id="contactl"><?php echo $data[9][3] ?></span></a></div>                             
+						<div class="follow"><b><?php echo $data[10][4] ?> </b><i class="fa fa-phone"></i><a href="tel:+2304670160"><span id="contactl"><?php echo $data[10][3] ?></span></a></div>
+						<div class="follow"><b><?php echo $data[11][4] ?> </b><i class="fa fa-whatsapp"></i><a href="tel:+23054837233"><span id="contactl"><?php echo $data[11][3] ?></span></a></div>
+						<div class="follow"><b><?php echo $data[12][4] ?> </b><i class="fa fa-envelope"></i><a href="mailto:adminofficer.befrienders@gmail.com"><a href="mailto:adminofficer.befrienders@gmail.com"><span id="contactl"><?php echo $data[12][3] ?></span></a></div>
 
 						<div class="follow"><label><b>Get Social:  </b></label>
 							<a href="https://www.facebook.com" target="blank"><i class="fa fa-facebook"></i></a>

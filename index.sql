@@ -2,7 +2,7 @@ CREATE DATABASE befrienders;
 
 CREATE TABLE home(
     ID 	            INTEGER			NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    sec_name	    VARCHAR(40)	        NOT NULL,
+    sec_name	    VARCHAR(40)	    NOT NULL,
     image	        VARCHAR(255),	
     description     VARCHAR(8000),
     link            VARCHAR(200),

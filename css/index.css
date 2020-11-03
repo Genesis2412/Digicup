@@ -254,6 +254,12 @@ h2
     color: #008d2f;
 }
 
+#emerlink
+{
+    color: #7c0000;
+    font-weight: bold;
+}
+
 .need #enum
 {
     padding-top: 20px;
