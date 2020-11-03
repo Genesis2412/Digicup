@@ -1,3 +1,6 @@
+<?php
+	include('array.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   	<head>
@@ -64,15 +67,15 @@
           
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/1.jpg" alt="">
+				<img src="<?php echo $data[0][2]; ?>">
             </div>
 
             <div class="carousel-item">
-                <img src="./img/2.jpg" alt="">
+				<img src="<?php echo $data[1][2]; ?>">
             </div>
 
             <div class="carousel-item">
-                <img src="./img/3.jpg" alt="">
+				<img src="<?php echo $data[2][2]; ?>">
             </div>
   
             <a class="carousel-control-prev" href="#banner" data-slide="prev">
@@ -91,17 +94,13 @@
 				<h2>About Us</h2>
 				<div class="row">
                     <div class="col-md-6">
-						<img src="./img/president.png" alt="president">
+						<img src="<?php echo $data[3][2]; ?>">
 					</div>
 
 					<div class="col-md-6">
 						<div id="aboutContent">
 							<p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type 
-                            specimen book. It has survived not only five centuries, but also the leap 
-                            into electronic typesetting, remaining essentially unchanged. 
+                            	<?php echo $data[3][3]?>
 							</p>
 							<span style="font-style: italic;">This is a quote</span>
 						</div>
@@ -114,11 +113,9 @@
         <a name="ourteam"></a>
 		<section class="teamdetails">            
 			<h2>Our Team</h2>
-			<img src="./img/grouppic.jpg" alt="group picture">
+			<img src="<?php echo $data[4][2]; ?>">
 			<p style="font-style: italic;">Befrienders Mauritius Team</p>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-			</p>
+			<p><?php echo $data[4][3] ?></p>
         </section>
 
 		<!--Our Promise-->
@@ -130,32 +127,24 @@
 						<div id="icon">
 							<i class="fa fa-trophy"></i>
 						</div>
-						<h3>OUR MISSION</h3>
-						<p>Our mission is to be a principal resource in emotional support delivered by volunteers. We value giving a
-							person the opportunity to explore feelings which can cause distress, the importance of being listened to,
-							in confidence, anonymously. We believe in the capacity for each person to build up his resilience and take
-							fundamental descisions about his own life.
-						</p>                    
+						<h3><?php echo $data[5][4] ?></h3>
+						<p><?php echo $data[5][3] ?></p>                    
 					</div> 
 
 					<div class="col-md-4 text-center">
 						<div id="icon">
 							<i class="fa fa-eye"></i>
 						</div>   
-						<h3>OUR VISION</h3>
-						<p>A society in which nobody dies by suicide, where people are able to explore their own feelings, acknowledge and respect
-							the feelings of others.
-						</p>                
+						<h3><?php echo $data[6][4] ?></h3>
+						<p><?php echo $data[6][3] ?></p>                
 					</div>
 
 					<div class="col-md-4 text-center">
 						<div id="icon">
 							<i class="fa fa-key"></i>
 						</div>
-						<h3>OUR VALUES</h3>
-						<p>Our values are based on these beliefs. The importance of having the opportunity to express painful feelings.
-							That being listened to, in confidence and accepted without prejudice can alleviate despair and suicidal feelings.
-						</p>                  
+						<h3><?php echo $data[7][4] ?></h3>
+						<p><?php echo $data[7][3] ?></p>                  
                     </div>
                                
 				</div>
@@ -272,11 +261,11 @@
 				<h2>Get In Touch</h2>
 				<div class="row">
                     <div class="col-md-6 contact-info">   
-						<div class="follow"><b>Address: </b><i class="fa fa-map-marker"></i><span id="contactl">1st Floor Flat, 152 Royal Road, Beau Bassin</span></div>
-						<div class="follow" style="color: #fc3903; font-size: 18px;"><b>HOTLINE: </b><i class="fa fa-phone"></i>+230 4670160</div>                             
-						<div class="follow"><b>Phone: </b><i class="fa fa-phone"></i><span id="contactl">+230 4670160</span></div>
-						<div class="follow"><b>Whatsapp </b><i class="fa fa-whatsapp"></i><span id="contactl">+230 54837233</span></div>
-						<div class="follow"><b>Email: </b><i class="fa fa-envelope"></i><a href="mailto:adminofficer.befrienders@gmail.com"><span id="contactl">adminofficer.befrienders@gmail.com</span></a></div>
+						<div class="follow"><b><?php echo $data[8][4] ?> </b><i class="fa fa-map-marker"></i><span id="contactl"><?php echo $data[8][3] ?></span></div>
+						<div class="follow" style="color: #fc3903; font-size: 18px;"><b><?php echo $data[9][4] ?> </b><i class="fa fa-phone"></i><?php echo $data[9][3] ?></div>                             
+						<div class="follow"><b><?php echo $data[10][4] ?> </b><i class="fa fa-phone"></i><span id="contactl"><?php echo $data[10][3] ?></span></div>
+						<div class="follow"><b><?php echo $data[11][4] ?> </b><i class="fa fa-whatsapp"></i><span id="contactl"><?php echo $data[11][3] ?></span></div>
+						<div class="follow"><b><?php echo $data[12][4] ?> </b><i class="fa fa-envelope"></i><a href="mailto:adminofficer.befrienders@gmail.com"><span id="contactl"><?php echo $data[12][3] ?></span></a></div>
 
 						<div class="follow"><label><b>Get Social:  </b></label>
 							<a href="https://www.facebook.com" target="blank"><i class="fa fa-facebook"></i></a>
