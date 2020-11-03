@@ -15,5 +15,7 @@ updatesec.php   --- updating details by id
 [Pending]
 swapsec modal css
 Testimonials
+
+***PA DELETE NANIER LOR ZOR WORKSPACE***
 *******************************************************************************
 
