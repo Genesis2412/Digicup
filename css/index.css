@@ -170,7 +170,7 @@ h2
 /*Our Promise*/
 .promise
 {
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("../img/suicidebanner.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("../img/suicide.jpg");
     background-size: cover;
     color: #efefef !important;
     background-attachment: fixed;

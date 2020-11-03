@@ -44,8 +44,8 @@
 		                        <?php endif; ?>
 	                    	</li>
 	                    	<li>
-		                        <?php if(!isset($_SESSION['userEmail'])): ?>
-		                                <a href="">BE A VOLUNTEER</a>
+		                        <?php if(!isset($_SESSION[''])): ?>
+		                                <a href="">REGISTER</a>
 		                        <?php endif; ?>
 	                  		</li>
 	                	</ul>
@@ -102,7 +102,7 @@
 							<p>
                             	<?php echo $data[3][3]?>
 							</p>
-							<span style="font-style: italic;">This is a quote</span>
+							<span style="font-style: italic;"><?php echo $data[3][4]?></span>
 						</div>
                     </div>
 				</div> 
