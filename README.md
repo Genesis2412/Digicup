@@ -21,6 +21,15 @@ testimonial.php --- page to display form
     hbackend.css___ css for form
 addtesti.php    --- script to add testimonials in database
             testimonial.sql --- table details for testimonials
+
+
+admin.php --- admin interface
+admin.css --- style for admin page
+addstaff.php --- form to add staff, update info of staff and delete staff
+insert.php --- insert data from staff form to database
+delete.php --- delete data from form to database
+update.php --- update data from form to database
+
 *******************************************************************************
 [Pending]
 sections a tags not working properly
