@@ -7,6 +7,24 @@ connection.php  --- connection database
              index.sql --- table details for homepage sections
 index.php       --- Homepage
     index.css   ___ css file for index
+    
+ style.css      --- css file for signin and signup
+ 
+ hbackend.css   --- css file for ueraccount.php
+ 
+ signup.php     --- signup page
+ 
+ signin.php     --- signin page 
+ 
+ checksessionLogin.php --- warns user if login invalid
+ 
+ server.php      --- Receiving all input values from form to create user
+ 
+ useraccount.php  ---- users are able to add testimonials and update their passwords.
+ 
+ logout.php       ---  destroy session by logging out
+ 
+ 
 
 array.php       --- querying database in a 2D array(home + testimonials)
 
