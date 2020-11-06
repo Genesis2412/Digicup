@@ -163,7 +163,7 @@
 					<div class="col-sm-3" data-aos="fade-right">
 						<div id="emergency">
 							<h6 style="color: #005f20;">CHAT WITH US</h6>
-							<a href=""><i class="fa fa-headphones"></i></a>
+							<a href="chat.html" target="blank"><i class="fa fa-headphones"></i></a>
 							<p>We are here to listen to you
 							<br><br>
 							<a href="tel:+230 8009393"><span id="emerlink">HOTLINE : +230 8009393</span></a>
