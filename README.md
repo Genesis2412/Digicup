@@ -18,6 +18,8 @@ index.php       --- Homepage
  
  checksessionLogin.php --- warns user if login invalid
  
+ processsignup.php   ---  
+ 
  server.php      --- Receiving all input values from form to create user
  
  useraccount.php  ---- users are able to add testimonials and update their passwords.
