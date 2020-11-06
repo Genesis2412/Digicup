@@ -14,6 +14,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<link rel="stylesheet" href="./css/index.css">
 		<title>HOMEPAGE || BEFRIENDERS</title>
   	</head>
@@ -87,18 +89,18 @@
 			</a>
         </div>	    
 
+		<span id="aboutUs">&nbsp;</span>
 		<!--About Us-->
-		<a name="aboutUs"></a>
 		<section class="about">
 			<div class="container">
 				<h2>About Us</h2>
 				<div class="row">
                     <div class="col-md-6">
-						<img src="<?php echo $data[3][2]; ?>">
+						<img src="<?php echo $data[3][2]; ?>" data-aos="fade-right">
 					</div>
 
 					<div class="col-md-6">
-						<div id="aboutContent">
+						<div id="aboutContent" data-aos="fade-left">
 							<p>
                             	<?php echo $data[3][3]?>
 							</p>
@@ -110,21 +112,20 @@
         </section>
         
         <!--Our Team-->
-        <a name="ourteam"></a>
 		<section class="teamdetails">            
 			<h2>Our Team</h2>
-			<img src="<?php echo $data[4][2]; ?>">
-			<p style="font-style: italic;">Befrienders Mauritius Team</p>
+			<img src="<?php echo $data[4][2]; ?>" data-aos="zoom-in">
+			<p style="font-style: italic;" data-aos="zoom-in">Befrienders Mauritius Team</p>
 			<p><?php echo $data[4][3] ?></p>
         </section>
 
+		<span id="ourPromise">&nbsp;</span>
 		<!--Our Promise-->
-		<a name="ourpromise"></a>
 		<section class="promise">
 			<div class="container">
 				<h2>Our Promise</h2>
 				<div class="row">
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center" data-aos="slide-up">
 						<div id="icon">
 							<i class="fa fa-trophy"></i>
 						</div>
@@ -132,7 +133,7 @@
 						<p><?php echo $data[5][3] ?></p>                    
 					</div> 
 
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center" data-aos="slide-up">
 						<div id="icon">
 							<i class="fa fa-eye"></i>
 						</div>   
@@ -140,7 +141,7 @@
 						<p><?php echo $data[6][3] ?></p>                
 					</div>
 
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center" data-aos="slide-up">
 						<div id="icon">
 							<i class="fa fa-key"></i>
 						</div>
@@ -152,18 +153,20 @@
 			</div>
 		</section>
 
+		<span id="needHelp">&nbsp;</span>
+		<!--Need Help-->
 		<a name="needHelp"></a>
 		<section class="need">
 			<h2>Need Help?</h2>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-3">
+					<div class="col-sm-3" data-aos="fade-right">
 						<div id="emergency">
 							<h6 style="color: #005f20;">CHAT WITH US</h6>
 							<a href=""><i class="fa fa-headphones"></i></a>
 							<p>We are here to listen to you
 							<br><br>
-							<a href="tel:+2304670160"><span id="emerlink">HOTLINE : +230 4670160</span></a>
+							<a href="tel:+230 8009393"><span id="emerlink">HOTLINE : +230 8009393</span></a>
 							</p>
 						</div>
 						<div id="enum">
@@ -176,7 +179,7 @@
 							<p><a href="tel:115"><span id="emerlink">Tel: 115</span></a></p>
 						</div>
 					</div>
-					<div class="col-sm-3" id="problem">
+					<div class="col-sm-3" id="problem" data-aos="zoom-in">
 						<h5>Why you have problems?</h5>
 						<ul>
 							<li>You cannot face difficulties in your personal life, family life, professional life
@@ -190,7 +193,7 @@
 							<li>You couldn't achieve your ambitions.</li>
 						</ul>
 					</div>
-					<div class="col-sm-3" id="happen">
+					<div class="col-sm-3" id="happen" data-aos="zoom-in">
 						<h5>What happens when you have problem?</h5>
 						<p style="font-weight: bold">You feel discouraged, sad, and feel like quitting everything and go... </p>
 						<ul>
@@ -206,7 +209,7 @@
 							<li><b>Suicide is not a solution</b></li>
 						</ul>
 					</div>
-					<div class="col-sm-3" id="effect">
+					<div class="col-sm-3" id="effect" data-aos="zoom-in">
 					<h5>What effect problems have on you?</h5>
 						<p style="font-weight: bold">You can</p>
 						<ul>
@@ -226,7 +229,6 @@
 		</section>
 
 		<!--Testimonials-->
-		<a name="testimonials"></a>
 		<section class="test">
 			<h2>Testimonials</h2>
 			<div class="container">
@@ -252,13 +254,13 @@
 			</div>
 		</section>
 
+		<span id="contactUs">&nbsp;</span>
 		<!--Contact Us-->
-		<a name="contactUs"></a>
 		<section class="contact">
 			<div class="container">
 				<h2>Get In Touch</h2>
 				<div class="row">
-                    <div class="col-md-6 contact-info">   
+                    <div class="col-md-6 contact-info" data-aos="fade-right">   
 						<div class="follow"><b><?php echo $data[8][4] ?> </b><i class="fa fa-map-marker"></i><span id="contactl"><?php echo $data[8][3] ?></span></div>
 						<div class="follow" style="color: #fc3903; font-size: 18px;"><b><?php echo $data[9][4] ?> </b><i class="fa fa-phone"></i><a href="tel:+2308009393"><span id="contactl"><?php echo $data[9][3] ?></span></a></div>                             
 						<div class="follow"><b><?php echo $data[10][4] ?> </b><i class="fa fa-phone"></i><a href="tel:+2304670160"><span id="contactl"><?php echo $data[10][3] ?></span></a></div>
@@ -266,14 +268,13 @@
 						<div class="follow"><b><?php echo $data[12][4] ?> </b><i class="fa fa-envelope"></i><a href="mailto:adminofficer.befrienders@gmail.com"><a href="mailto:adminofficer.befrienders@gmail.com"><span id="contactl"><?php echo $data[12][3] ?></span></a></div>
 
 						<div class="follow"><label><b>Get Social:  </b></label>
-							<a href="https://www.facebook.com" target="blank"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.facebook.com/BefriendersMauritius/" target="blank"><i class="fa fa-facebook"></i></a>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-						<div id="map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.98651427640849!2d57.46807423937736!3d-20.226285433666945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5acddab7da25%3A0x3b5790fec6101b9d!2sBeau%20Bassin%20Police%20Station!5e0!3m2!1sen!2smu!4v1604211673914!5m2!1sen!2smu" 
-							 frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+						<div id="map" data-aos="zoom-in">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59900.560071149346!2d57.43296797910154!3d-20.226253199999977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b920f420c69%3A0xbfea6c7d66e17059!2sBefrienders%20Mauritius!5e0!3m2!1sen!2smu!4v1604692225860!5m2!1sen!2smu" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 						</div>
                     </div>
 				</div>
@@ -296,6 +297,11 @@
 	            $('nav').toggleClass('active')
 	          })      
 	        });	          
-		</script>          
+		</script>
+		
+		<script>
+			AOS.init();
+		</script>
+
 	</body>
 </html>

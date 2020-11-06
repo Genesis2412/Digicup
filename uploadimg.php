@@ -10,7 +10,10 @@
   $uploadOk = 1;
   $imageFileType = pathinfo($location,PATHINFO_EXTENSION);
 
-  $_SESSION["locator"]= $location;
+  if($location ! = 0)
+  {
+    $_SESSION["locator"]= $location;
+  }
 
   /* Valid Extensions */
   $valid_extensions = array("jpg","jpeg","png");
