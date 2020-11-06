@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 
 // Change this to your connection info.
@@ -26,7 +26,10 @@ if (isset($_POST['submitRegBtn'])) {
   if(mysqli_query($conn, $sqlCodes)){
 
     $_SESSION['RegUserWarns'] = "User Successfully created ";
-    header("Location: useraccount.php");
+    $_SESSION['UserAcc'] = $username;
+    $_SESSION['UserEmail'] = $email ;
+
+    header("Location: signin.php");
 
   }
   else{

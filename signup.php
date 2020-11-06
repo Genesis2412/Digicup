@@ -1,3 +1,12 @@
+
+<?php session_start();
+if(isset($_SESSION['uname'])){
+
+  header("Location: useraccount.php");
+
+}
+
+?>
 <?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
