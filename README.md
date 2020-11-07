@@ -52,9 +52,13 @@ update.php --- update data from form to database
 
 
  MainArticle.html -- Display All Article Catalog(Modify the nav bar href)
+ 
  Article.php -- Specific Article on click(moify the nav bar href)
+ 
  Events.html --Display ALl events catalog(Modify the nav bar href)
+ 
  MyEvent.php --Specific Event on click(Modify the nav bar href)
+ 
 
 *******************************************************************************
 [Pending]
