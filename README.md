@@ -26,9 +26,7 @@ index.php       --- Homepage
  
  logout.php       ---  destroy session by logging out
  
- MainArticle.html -- Display All Article Catalog
- 
- Events.html --Display ALl events catalog
+
 
 array.php       --- querying database in a 2D array(home + testimonials)
 
@@ -51,6 +49,16 @@ addstaff.php --- form to add staff, update info of staff and delete staff
 insert.php --- insert data from staff form to database
 delete.php --- delete data from form to database
 update.php --- update data from form to database
+
+
+ MainArticle.html -- Display All Article Catalog(Modify the nav bar href)
+ 
+ Article.php -- Specific Article on click(moify the nav bar href)
+ 
+ Events.html --Display ALl events catalog(Modify the nav bar href)
+ 
+ MyEvent.php --Specific Event on click(Modify the nav bar href)
+ 
 
 *******************************************************************************
 [Pending]
