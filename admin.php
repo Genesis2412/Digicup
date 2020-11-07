@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="./css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -32,10 +32,10 @@
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
-        <a href="addstaff.php"><i class="fa fa-users" aria-hidden="true"></i><span>Staff</span></a>
-        <a href="#"><i class="fas fa-file-alt" aria-hidden="true"></i><span>Manage Article</span></a>
-        <a href="#"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Manage Events</span></a>
-        <a href="#"><i class="fas fa-clipboard" aria-hidden="true"></i><span>Manage Home Page</span></a>
+        <a href="#" onclick="managestaff();return false;"><i class="fa fa-users" aria-hidden="true"></i><span>Staff</span></a>
+        <a href="AddArticleAjax.php" ><i class="fas fa-file-alt" aria-hidden="true"></i><span>Manage Articles</span></a>
+        <a href="NewAddEventAjax.php"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Manage Events</span></a>
+        <a href="swapsec.php"><i class="fas fa-clipboard" aria-hidden="true"></i><span>Manage Home Page</span></a>
         
         
       </div>
@@ -48,8 +48,8 @@
         <h4>Jose Emilien</h4>
       </div>
         <a href="#" onclick="managestaff();return false;"><i class="fa fa-users" aria-hidden="true"></i><span>Staff</span></a>
-        <a href="#" onclick="managearticle();return false;"><i class="fas fa-file-alt" aria-hidden="true"></i><span>Manage Article</span></a>
-        <a href="#" onclick="manageevent();return false;"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Manage Events</span></a>
+        <a href="ArticleAjax.php"><i class="fas fa-file-alt" aria-hidden="true"></i><span>Manage Articles</span></a>
+        <a href="NewAddEventAjax.phpAdd"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Manage Events</span></a>
         <a href="swapsec.php"><i class="fas fa-clipboard" aria-hidden="true"></i><span>Manage Home Page</span></a>
         
         
@@ -93,20 +93,7 @@
             {
                 $.ajax({
                     type:"POST",
-                    url:"",
-                    success: function(value){
-                        $(".content").html(value);
-                    }
-                });
-            }
-        </script>
-
-                <script type="text/javascript">
-            function manageevent()
-            {
-                $.ajax({
-                    type:"POST",
-                    url:"",
+                    url:"Digicup-main/AddArticleAjax.php",
                     success: function(value){
                         $(".content").html(value);
                     }
@@ -130,4 +117,6 @@
 
   </body>
 </html>
+
+
 
