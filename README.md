@@ -26,7 +26,9 @@ index.php       --- Homepage
  
  logout.php       ---  destroy session by logging out
  
+ MainArticle.html -- Display All Article Catalog
  
+ Events.html --Display ALl events catalog
 
 array.php       --- querying database in a 2D array(home + testimonials)
 
