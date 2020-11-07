@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <head>
+        <title> All Articles | Befrienders Mauritius </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!--Bootstrap CDN -->
+        <!-- <script src="js//jquery-3.4.1.min.js"></script> jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--FontAwesome CDN -->
+        <link rel="stylesheet" href="css/Events.css"> <!-- Common sharable css file for Events -->
+        <link rel="stylesheet" href="css/AllArticle.css"> <!-- css file for All Articles -->
+        <link rel="stylesheet" href="css//index.css">
+
+    </head>
+    <style>
+        .MiddleOne{
+            float:left;    
+            color:black;
+        }
+    </style>
+
+    <script>
+
+        function dispTrending(){
+            $.ajax({
+                    type:"POST",
+                    url:"WhatsTrending.php",
+                    success: function(value){
+                        $(".TrendingNowInfo").html(value);
+                    }
+                });
+
+        }
+
+        function disp5RecentArt(){
+            $.ajax({
+                    type:"POST",
+                    url:"Disp5MostRecentArticle.php",
+                    success: function(value){
+                        $("#fiverArticle").html(value);
+                    }
+                });
+
+        }
+
+        function DisplayAllArt(){
+            $.ajax({
+                    type:"POST",
+                    url:"DisplayAllArticles.php",
+                    success: function(value){
+                        $("#AllArticlesDisplayer").html(value);
+                    }
+                });
+
+        }
+        
+        function DisplayAlertSession(){
+            $.ajax({
+                    type:"POST",
+                    url:"WarningSessionSystem.php",
+                    success: function(value){
+                        $("#SessionWarns").html(value);
+                    }
+                });
+
+        }
+
+    </script>
+    <style>
+        #TrendyData{
+            padding-left: 35%;
+            padding-top:5%;
+        }
+    </style>
+    
+    <body onload=" dispTrending(); disp5RecentArt(); DisplayAllArt(); DisplayAlertSession(); ">
+        <!-- <nav> 
+            <div id="header"> 
+                <img src="img//logo.png" width="150px" height="70px" alt="Logo" />
+                <div class="text-right" id="HeaderLinks" > 
+                    <a href="" class="LinksHead"> Homepage </a>
+                    <a href="" class="LinksHead"> Login </a>
+                    <a href="" class="LinksHead"> Contact Us </a>
+                </div>
+            </div>
+        </nav>  -->
+
+        <!--Navigation Bar-->
+	  	<header >
+	        <div class="logo">
+	          <a href="#"><img src="./img/logo.png" alt="Befrienders Mauritius"></a>
+	        </div>
+
+	        <nav>
+	        	<ul>
+	            	<li><a  href="index.php">HOME</a></li>
+	            	<li><a href="Events.html">EVENTS</a></li>
+	            	<li><a href="">LOGIN</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                    
+	          </ul>
+	        </nav>
+
+	        <!--Hamburger-->
+	        <div class="menu-toggle">
+	          <i class="fa fa-bars" aria-hidden="true">
+                <ul>
+                    <li><a  href="index.php">HOME</a></li>
+	            	<li><a href="Events.html">EVENTS</a></li>
+	            	<li><a href="">LOGIN</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+              </i>
+	        </div>
+	    </header>
+
+        <div id="TrendyData" >
+            <span style="color:white;background-color:#CE0606;border:1px solid grey;padding:5px;">  What's Trending </span>
+            <span  class="TrendingNowInfo" style="padding-left: 10px;border:1px solid grey;padding:5px;padding-right:55px;padding-left: 10px;">  </span>
+        </div>
+
+        <div id="MobileTrend"  >  Trending: <span class="TrendingNowInfo"> </span></div>
+        <div id="SessionWarns" style="padding-left:25px;padding-right: 25px;padding-top:10px;">
+         
+       </div>
+
+
+        <div id="fiverArticle" style="padding-left: 5%;padding-top: 20px;padding-bottom: 10px;">
+        </div>
+        
+        
+        <div style="padding-top:20%;padding-left: 20px;" class="container-fluid" id="AllArticlesDisplayer">
+
+        </div>
+        
+        <!-- <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav> -->
+
+        <footer style="background-color:#acfa73;margin-top: auto;display:flex;flex-flow:row wrap;padding-top: 25px;">
+            <p id="RightReserve" >All Right reserved by &copy;Befrienders</p>
+        </footer>
+    </body>
+</html>

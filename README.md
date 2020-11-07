@@ -18,13 +18,17 @@ index.php       --- Homepage
  
  checksessionLogin.php --- warns user if login invalid
  
+ processsignup.php   ---  
+ 
  server.php      --- Receiving all input values from form to create user
  
  useraccount.php  ---- users are able to add testimonials and update their passwords.
  
  logout.php       ---  destroy session by logging out
  
+ MainArticle.html -- Display All Article Catalog
  
+ Events.html --Display ALl events catalog
 
 array.php       --- querying database in a 2D array(home + testimonials)
 
