@@ -1,10 +1,6 @@
 <?php SESSION_START();
 
-// Change this to your connection info.
-$servername = 'localhost';
-$username= 'root';
-$password= '';
-$database = 'phplogin';
+include('connection.php');
 
 // Try and connect using the info above.
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -29,13 +25,13 @@ $result=mysqli_query($conn, $sql);
 	}else{
 
 		$_SESSION["error"]="invalid";
-		header("Location:signin.html");
+		header("Location:signin.php");
 	}
 
 
 	}else{
 		$_SESSION["error"]="form not submitted";
-		header("Location:signin.html");
+		header("Location:signin.php");
 	}
 
 

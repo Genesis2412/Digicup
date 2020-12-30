@@ -1,5 +1,6 @@
 <?php
 	include('array.php');
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,25 +30,25 @@
 	        <nav>
 	        	<ul>
 	            	<li><a class="active" href="#">HOME</a></li>
-	            	<li><a href="">EVENTS</a></li>
-	            	<li><a href="">BLOG</a></li>
+	            	<li><a href="Events.html">EVENTS</a></li>
+	            	<li><a href="MainArticle.html">BLOG</a></li>
                     <li>
-                        <a href="">VOLUNTEER</a>
+                        <a href="">MEMBER</a>
 	                	<ul>
 	                    	<li>
-	                        	<a href="">MY ACCOUNT</a>
+	                        	<a href="useraccount.php">MY ACCOUNT</a>
 	                    	</li>
 	                    	<li>
 	                        	<!--Hide/show links-->
-		                        <?php if(isset($_SESSION[''])): ?>
-		                                <a href="">LOGOUT</a>
+		                        <?php if(isset($_SESSION['uname'])): ?>
+		                                <a href="logout.php">LOGOUT</a>
 		                        <?php else: ?>
-		                                <a href="">LOGIN</a>
+		                                <a href="signin.php">LOGIN</a>
 		                        <?php endif; ?>
 	                    	</li>
 	                    	<li>
-		                        <?php if(!isset($_SESSION[''])): ?>
-		                                <a href="">REGISTER</a>
+		                        <?php if(!isset($_SESSION['uname'])): ?>
+		                                <a href="signup.php">REGISTER</a>
 		                        <?php endif; ?>
 	                  		</li>
 	                	</ul>

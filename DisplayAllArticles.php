@@ -9,7 +9,7 @@ echo ' <h3 id="ArticleClickMsg" class="display-3 text-center"> Our Articles at a
 echo '<div class="row">';
 
 $sql="select * from article";
-$result=mysqli_query($conn,$sql);
+$result=mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($result)>0){
 

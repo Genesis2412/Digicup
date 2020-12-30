@@ -42,10 +42,10 @@ if(mysqli_num_rows($result)>0){
         <div id="header"> 
             <img src="img//logo.png" width="150px" height="70px" alt="Logo" />
             <div class="text-right" id="HeaderLinks" > 
-                <a href="" class="LinksHead"> Homepage </a>
+                <a href="index.php" class="LinksHead"> Homepage </a>
                 
                 <button class="btn btn-info"> Interested! </button>
-                <a href="" class="LinksHead"> Contact Us </a>
+                <a href="index.php#contactUs" class="LinksHead"> Contact Us </a>
             </div>
         </div>
     </nav>

@@ -101,8 +101,8 @@
 	        	<ul>
 	            	<li><a  href="index.php">HOME</a></li>
 	            	<li><a href="Events.html">EVENTS</a></li>
-	            	<li><a href="">LOGIN</a></li>
-                    <li><a href="">CONTACT US</a></li>
+	            	<li><a href="signin.php">LOGIN</a></li>
+                    <li><a href="index.php#contactUs">CONTACT US</a></li>
                     
 	          </ul>
 	        </nav>
