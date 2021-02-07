@@ -33,22 +33,75 @@ if(mysqli_num_rows($result)>0){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--FontAwesome CDN -->
         <link rel="stylesheet" href="css/Events.css"> <!-- Common sharable css file for Events -->
         <link rel="stylesheet" href="css//MyEvent.css"> 
-        <!-- <script src="JS//MyEvent.js"> </script> -->
+       
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="./css/index.css">
         <link rel="stylesheet" type="text/css" href="css//footer.css">
-</head>
+
+        <script>
+                $(document).ready(function(){
+
+                        $("#Suicide").click(function(){
+                            $("#DisplayerSuicide").fadeIn();
+                            $("#DisplayerBefriendersMu").fadeOut();
+                            $("#DisplayerTalkOnSuicide").fadeOut();
+
+                        });
+                        $("#BefriendersMu").click(function(){
+                            $("#DisplayerBefriendersMu").fadeIn();
+                            $("#DisplayerSuicide").fadeOut();
+                            $("#DisplayerTalkOnSuicide").fadeOut();
+                        });
+                        $("#TalkOnSuicide").click(function(){
+                            $("#DisplayerTalkOnSuicide").fadeIn();
+                            $("#DisplayerBefriendersMu").fadeOut();
+                            $("#DisplayerSuicide").fadeOut();
+                        });
+                })
+            </script>
+
+    </head>
 <body>
-    <nav> 
-        <div id="header"> 
-            <img src="img//logo.png" width="150px" height="70px" alt="Logo" />
-            <div class="text-right" id="HeaderLinks" > 
-                <a href="index.php" class="LinksHead"> Homepage </a>
-                
-                <button class="btn btn-info"> Interested! </button>
-                <a href="index.php#contactUs" class="LinksHead"> Contact Us </a>
-            </div>
-        </div>
-    </nav>
+        <!--Navigation Bar-->
+        <header>
+	        <div class="logo">
+	          <a href="#"><img src="./img/logo.png" alt="Befrienders Mauritius"></a>
+	        </div>
+
+	        <nav>
+	        	<ul>
+	            	<li><a class="active" href="#">HOME</a></li>
+	            	<li><a href="Events.html">EVENTS</a></li>
+	            	<li><a href="MainArticle.html">BLOG</a></li>
+                    <li>
+                        <a href="">MEMBER</a>
+	                	<ul>
+	                    	
+	                    	<li>
+	                        	<!--Hide/show links-->
+		                        <?php if(isset($_SESSION['Username'])){
+									echo '<div style="padding:20px;color:white;"> Welcome '.$_SESSION["Username"].'<a href="logout.php">LOGOUT</a> </div>';
+
+								}
+								else{
+									echo '<a href="signin.php">LOGIN</a>';
+								}
+		                    ?>
+	                    	</li>
+	                    	
+	                	</ul>
+	            	</li>
+	            	<li><a href="#aboutUs">ABOUT US</a></li>
+                    <li><a href="#contactUs">CONTACT US</a></li>
+                    <li><a href="#needHelp">NEED HELP?</a></li>
+	          </ul>
+	        </nav>
+
+	        <!--Hamburger-->
+	        <div class="menu-toggle">
+	          <i class="fa fa-bars" aria-hidden="true"></i>
+	        </div>
+	    </header>  
 
     <!-- <nav aria-label="breadcrumb" >
         <ol class="breadcrumb">
@@ -111,41 +164,42 @@ if(mysqli_num_rows($result)>0){
 
     
     <div id="EventInformations" style="padding-top:50px;" class="text-center">
-        <span class="InfoEvent">
+        <span class="InfoEventA">
             <i class="fa far fa-bell"></i>
             <?php echo " Event Type: ".$row['EventType'];  ?>
         </span>
-        <span class="InfoEvent">
+        <span class="InfoEventA">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <?php echo $row['EventDate']; ?> At <?php echo $row['EventTime']; ?> 
         </span>
-        <span class="InfoEvent">
+        <span class="InfoEventA">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <?php echo $row['EventLocation']; ?> 
         </span>
         
     </div>
     <br/>
-    <footer class="footer">
-		<div class="footer-left">
-			<h5>Befrienders Mauritius</h5>
-			<p>We can help prevent suicide. Befrienders provide 24/7 free and confidential support for people in distress, prevention and crisis resources for you or your loved ones.</p>
-	    </div>
-	
-	    <div class="footer-right">
-		    <h5>Address</h5>
-            <i class="fas fa-map-marked-alt"></i><p>Befrienders(Mauritius)<br>1st Floor Flat,<br> 152 Royal Road,<br> Beau Bassin</p>
-            <i class="fa fa-tty"></i><p>Office: <a href="tel:+230 4670160"> 4670160 </a> </p>
-            <i class="fa fa-mobile"></i><p>Mobile: <a href="tel:+230 54837233">54837233</a> </p>
-            <i class="fa fa-fire"></i><p>Hotline: <a href="tel:+230 8009393">8009393</a> </p>
-            <i class="fa fa-envelope"></i><p>Email: <a href="mailto:adminofficer.befrienders@gmail.com" id="Links"> Befrienders Mauritius</a> </p>
-        </div>
-
-	    <div class="footer-bottom">
-		    <p>All Right reserved by &copy;Befrienders</p>
-	    </div>
-
-    </footer>
+    <div style="padding-bottom:25px;"> </div>
+        <footer class="footer" style="background-color: rgb(99, 165, 99);">
+            <div class="footer-left">
+                <h5>Befrienders Mauritius</h5>
+                <p>We an help prevent suicide. Befrienders provide 24/7 free and confidential support for people in distress, prevention and crisis resources for you or your loved ones.</p>
+            </div>
+        
+            <div class="footer-right">
+                <h5>Address</h5>
+                <i class="fas fa-map-marked-alt"></i><p>Befrienders(Mauritius)<br>1st Floor Flat,<br> 152 Royal Road,<br> Beau Bassin</p>
+                <i class="fa fa-tty"></i><p>Office: 4670160</p>
+                <i class="fa fa-mobile"></i><p>Mobile: 54837233</p>
+                <i class="fa fa-fire"></i><p>Hotline: 8009393</p>
+                <i class="fa fa-envelope"></i><p>Email: <a href="mailto:adminofficer.befrienders@gmail.com" style="color:white;"> Befrienders Mauritius</a> </p>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>All Right reserved by &copy;Befrienders</p>
+            </div>
+    
+        </footer>
 
 </body>
 

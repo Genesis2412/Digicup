@@ -1,5 +1,7 @@
-<?php
+<?php session_start();
 include('connection.php');
+
+
 ?>
 
 
@@ -20,7 +22,12 @@ include('connection.php');
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Staff Details</h5>
+      <?php  
+      
+        echo '<h5 class="modal-title" id="exampleModalLabel">Add Staff Details</h5>';
+      
+      ?>
+        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -39,6 +46,11 @@ include('connection.php');
                </div>
 
                <div class="form-group">
+                	<label> Username(Unique) </label>
+                	<input type="text" name="uname" class="form-control" placeholder="Enter Username" required>
+               </div>
+
+               <div class="form-group">
                 	<label> Address </label>
                 	<input type="text" name="address" class="form-control" placeholder="Enter Address" required >
                </div>
@@ -53,9 +65,22 @@ include('connection.php');
                 	<input type="text" name="contact" class="form-control" placeholder="Enter Contact Number" required >
                </div>
 
+               <div class="form-group">
+                	<label> Password </label>
+                	<input type="password" name="pwd" class="form-control" placeholder="Enter Initial Password" required >
+               </div>
+
       	       <div class="form-group">
-                	<label> Post </label>
-                	<input type="text" name="position" class="form-control" placeholder="Enter Post" required >
+                	<label> Access Post </label> <br/>
+                	<!-- <input type="text" name="position" class="form-control" placeholder="Enter Access Position" required > -->
+                  <input type="radio" id="3" name="position" value="Pos3">
+                  <label for="3">Check Admin (REDUCED ACCESS)</label> <br/>
+
+                  <input type="radio" id="2" name="position" value="Pos2">
+                  <label for="2">Middle Admin Level (LIMITED ACCESS)</label> <br/>
+ 
+                  <input type="radio" id="1" name="position" value="Pos1">
+                  <label for="1">SuperUser (ALL ACCESS)</label> <br/>
                </div>
         
       </div>
@@ -168,8 +193,13 @@ include('connection.php');
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staffaddmodal">Add Staff</button>
-				</div>
+        <?php 
+        if(!($_SESSION['Position']=="Pos3")){
+          echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staffaddmodal">Add Staff
+          </button>';
+        }
+        ?>
+					</div>
 			</div>
 
              <div class="card">
@@ -212,13 +242,42 @@ include('connection.php');
                        		<td><?php echo $row['email'] ?></td>
                        		<td><?php echo $row['contact_number'] ?></td>
                             <td><?php echo $row['position'] ?></td>
-                       		<td>
+
+
+                            <?php 
+                           if($_SESSION['Position']=="Pos1"){
+                            echo '<td>
+                            <button type="button" class="btn btn-success editbtn">Edit</button>
+                          </td>
+                         
+                            <td>
+                              <button type="button" class="btn btn-danger deletebtn">Delete</button>
+                            </td>';
+
+                           }
+                           else if($_SESSION['Position']=="Pos2"){
+                            echo '<td>
+                            <button type="button" class="btn btn-success editbtn">Edit</button>
+                          </td>
+                         
+                            <td>
+                            Not Available
+                            </td>';
+
+                          } 
+                          else if($_SESSION['Position']=="Pos3"){
+                            echo "<td> Not Available </td> <td> Not Available </td>";
+
+                          } 
+                           ?>
+
+                       		<!-- <td>
                        			<button type="button" class="btn btn-success editbtn">Edit</button>
                        		</td>
                           
                              <td>
                              	<button type="button" class="btn btn-danger deletebtn">Delete</button>
-                             </td>
+                             </td> -->
 
                        	</tr>
                        </tbody>

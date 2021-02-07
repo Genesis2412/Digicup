@@ -91,28 +91,46 @@
         </div>
     </nav>  -->
 
-            <!--Navigation Bar-->
-	  	<header >
+        <!--Navigation Bar-->
+        <header>
 	        <div class="logo">
 	          <a href="#"><img src="./img/logo.png" alt="Befrienders Mauritius"></a>
 	        </div>
 
 	        <nav>
 	        	<ul>
-	            	<li><a  href="index.php">HOME</a></li>
+	            	<li><a  href="#">HOME</a></li>
 	            	<li><a href="Events.html">EVENTS</a></li>
-	            	<li><a href="signin.php">LOGIN</a></li>
-                    <li><a href="index.php#contactUs">CONTACT US</a></li>
-                    
+	            	<li><a class="active" href="MainArticle.html">BLOG</a></li>
+                    <li>
+                        <a href="">MEMBER</a>
+	                	<ul>
+	                    	
+	                    	<li>
+	                        	<!--Hide/show links-->
+		                        <?php if(isset($_SESSION['Username'])){
+									echo '<div style="padding:20px;color:white;"> Welcome '.$_SESSION["Username"].'<a href="logout.php">LOGOUT</a> </div>';
+
+								}
+								else{
+									echo '<a href="signin.php">LOGIN</a>';
+								}
+		                    ?>
+	                    	</li>
+	                    	
+	                	</ul>
+	            	</li>
+	            	<li><a href="#aboutUs">ABOUT US</a></li>
+                    <li><a href="#contactUs">CONTACT US</a></li>
+                    <li><a href="#needHelp">NEED HELP?</a></li>
 	          </ul>
 	        </nav>
 
 	        <!--Hamburger-->
 	        <div class="menu-toggle">
-	          <i class="fa fa-bars" aria-hidden="true">
-              </i>
+	          <i class="fa fa-bars" aria-hidden="true"></i>
 	        </div>
-	    </header>
+	    </header>    
 
 
 

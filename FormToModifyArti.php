@@ -1,5 +1,15 @@
-
 <?php session_start();
+
+if(!(isset($_SESSION['staff'])) && (!($_SESSION['Position']=="3")))
+{
+    $_SESSION['LoginWarns'] = "Error :You are not authorized to access this page";
+    header("Location: signin.php");
+
+}
+
+
+?>
+<?php 
 
 require('connection.php');
 
@@ -52,14 +62,17 @@ if(isset($_GET['id'])){
             $sqlInsert="UPDATE `article` SET `ATitle`='".$title."' , `ArticleData`= '".$Content."' WHERE ArticleID='$id';";
 
             if( mysqli_query($conn,$sqlInsert)){
-                echo "<script> alert('Article Changed Successfully'); </script>  ";
+                $_SESSION['adminWarn'] = "Article with ID ".$id." has been modified!";
+                header("Location: admin.php");
                 
                 
                
 
             }
             else{
-                echo "Error: ".mysqli_error($conn);
+                //echo "Error: ".mysqli_error($conn);
+                $_SESSION['adminWarn'] = mysqli_error($conn);
+                header("Location: admin.php");
             }
 
 
@@ -68,6 +81,7 @@ if(isset($_GET['id'])){
 
 }
 else{
+    $_SESSION['adminWarn'] = "You are not authorized to do this change";
     header("Location: admin.php");
 }
 

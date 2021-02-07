@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 include('connection.php');
 ?>
 
@@ -15,30 +15,40 @@ if(isset($_POST['insertdata']))
 	$email = mysqli_real_escape_string($connection,$_POST['email']);
 	$contact = mysqli_real_escape_string($connection,$_POST['contact']);
 	$position = mysqli_real_escape_string($connection,$_POST['position']);
+	$username = mysqli_real_escape_string($connection,$_POST['uname']);
+	$Temppwd = mysqli_real_escape_string($connection,$_POST['pwd']);
+	$pwd = md5($Temppwd);
 
-	$emailquery = "SELECT * FROM staff WHERE email='$email' ";
-
-	
-	$query_run = mysqli_query($connection,$emailquery);
+	$checker = "SELECT * FROM staff WHERE email='$email'";
+	$checker2 = "SELECT * FROM staff WHERE Username='$username' ";
+	$query_run = mysqli_query($connection,$checker);
+	$query_run2 = mysqli_query($connection,$checker2);
 
 	$emailcount = mysqli_num_rows($query_run);
+	$Usrcount = mysqli_num_rows($query_run2);
 
 	if($emailcount>0){
-		echo "Email Already Exists! Staff Not Added!";
-		header('Location: addstaff.php');
-	}else{
-		$query = "INSERT INTO staff (`first_name`,`last_name`,`address`,`email`,`contact_number`,`position`) VALUES ( '$fname','$lname','$address','$email','$contact','$position')";
+		$_SESSION['adminWarn']="Email Already Exist. Account creation was cancelled";
+		header('Location: admin.php');
+	}else if($Usrcount>0){
+		$_SESSION['adminWarn']="Username already Exist. Please choose another one";
+		header('Location: admin.php');
+	}
+	
+	else{
+		$query = "INSERT INTO staff (`first_name`,`last_name`,`address`,`email`,`contact_number`,`position`,`Username`,`Password`) VALUES ( '$fname','$lname','$address','$email','$contact','$position','$username','$pwd')";
 
 		$insertquery = mysqli_query($connection,$query);
 	}
 
 	if($insertquery){
-		echo '<script> alert("Staff Added") </script>';
-		header('Location: addstaff.php');
+		$_SESSION['adminWarn']="Staff Added";
+		
 	}
 	else{
-		echo'<script> alert("Staff Not Added ! ") </script>';
+		$_SESSION['adminWarn']="Staff Not Added ";
 	}
+	header('Location: admin.php');
 }
 
 

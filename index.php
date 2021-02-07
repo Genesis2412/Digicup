@@ -35,22 +35,19 @@
                     <li>
                         <a href="">MEMBER</a>
 	                	<ul>
-	                    	<li>
-	                        	<a href="useraccount.php">MY ACCOUNT</a>
-	                    	</li>
+	                    	
 	                    	<li>
 	                        	<!--Hide/show links-->
-		                        <?php if(isset($_SESSION['uname'])): ?>
-		                                <a href="logout.php">LOGOUT</a>
-		                        <?php else: ?>
-		                                <a href="signin.php">LOGIN</a>
-		                        <?php endif; ?>
+		                        <?php if(isset($_SESSION['Username'])){
+									echo '<div style="padding:20px;color:white;"> Welcome '.$_SESSION["Username"].'<a href="logout.php">LOGOUT</a> </div>';
+
+								}
+								else{
+									echo '<a href="signin.php">LOGIN</a>';
+								}
+		                    ?>
 	                    	</li>
-	                    	<li>
-		                        <?php if(!isset($_SESSION['uname'])): ?>
-		                                <a href="signup.php">REGISTER</a>
-		                        <?php endif; ?>
-	                  		</li>
+	                    	
 	                	</ul>
 	            	</li>
 	            	<li><a href="#aboutUs">ABOUT US</a></li>

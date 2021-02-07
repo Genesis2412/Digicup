@@ -10,7 +10,7 @@
                     echo ('<div class="MiddleOne" >');
 
                     if($row['CoverImage']!=""){
-                        echo ('<img id="Img'.$row['ArticleID'].'" src="img//ArticleDir//ArticleUploads//'.$row['CoverImage'].'" width="250px" height="170px" alt="Caption">');
+                        echo ('<div id="EmptySpacer"> <img id="Img'.$row['ArticleID'].'" src="img//ArticleDir//ArticleUploads//'.$row['CoverImage'].'" width="250px" height="170px" alt="Caption">');
                         
                         
                     }
@@ -25,7 +25,7 @@
                         $modifiedHeader=$modifiedHeader."..";  
                     }
                     echo ('<p class="EventName'.$row['ArticleID'].'" style="background-color:lightgray;padding-right:20%;">'.$modifiedHeader.' &nbsp;&nbsp; </p>');
-                    echo ('</div>');
+                    echo ('</div></div>');
                     echo ('</a> ');
 
                 }

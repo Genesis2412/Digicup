@@ -5,7 +5,7 @@ $NumberPagination=1;
 $Entered=0;
 
 echo '<div class="jumbotron"> ';
-echo ' <h3 id="ArticleClickMsg" class="display-3 text-center"> Our Articles at a click</h3><hr>';
+echo ' <h3 id="ArticleClickMsg" class="display-3 text-center" style="padding-right:60px;">  Our Articles at a click</h3><hr>';
 echo '<div class="row">';
 
 $sql="select * from article";

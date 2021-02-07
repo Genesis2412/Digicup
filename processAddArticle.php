@@ -61,13 +61,13 @@
         $sql = "INSERT INTO article(ATitle,Author,ArticleData,CoverImage) VALUES ('$Title','$author','$ArticleData','$coverImagePath'); ";
         
         if(mysqli_query($conn,$sql)){
-            $_SESSION['ArticleBackend'] = "Article has been successfully created!";
-             header("Location: AddArticleAjax.php?r=SuccessAdd");
+            $_SESSION['adminWarn'] = "Article has been successfully created!";
+             header("Location: admin.php");
         }
 
         else{
-            $_SESSION['ArticleBackend'] = "Article has not been created!";
-            header("Location: AddArticleAjax.php?r=SqlCodeErr");
+            $_SESSION['adminWarn'] = "Article has not been created!";
+            header("Location: admin.php");
 
         }
 

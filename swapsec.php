@@ -1,3 +1,16 @@
+<?php session_start();
+
+if(!(isset($_SESSION['staff'])) && (!($_SESSION['Position']=="3")))
+{
+    $_SESSION['LoginWarns'] = "Error : You are not authorized to access this site";
+    header("Location: signin.php");
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +25,10 @@
     <title></title>
 </head>
 <body>
-    <a href="#" onclick="allItems();return false;">List the sections</a></li>
-
+    <div style="padding-left:50px;font-size:25pt;">
+        <a href="#" onclick="allItems();return false;">List the sections</a></li> <br/>
+        <a href="admin.php" >Return to Admin Interface</a></li>
+    </div>
     <div class="content">
     </div>
 

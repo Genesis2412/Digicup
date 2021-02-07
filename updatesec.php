@@ -14,7 +14,7 @@
 
 	if($process)
 	{
-		echo "Details Updated";
+		echo "Details Updated. Ignore any Warnings or notices being generated";
 	}
 	else
 	{

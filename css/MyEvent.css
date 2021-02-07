@@ -1,4 +1,15 @@
-.InfoEvent{
+/* .InfoEvent{
+    
+    color:black;
+    padding-left: 50px;
+    padding-right: 25px;
+    border-top: 1px solid grey;
+    padding-top:15px;
+    padding-bottom:15px;
+    
+} */
+
+.InfoEventA{
     
     color:black;
     padding-left: 50px;
@@ -15,3 +26,15 @@
     display:none;
 }
 
+@media (max-width: 767.98px) { 
+    
+
+
+ }
+
+
+
+ @media (max-width: 1199.98px) { 
+     
+     
+ }
